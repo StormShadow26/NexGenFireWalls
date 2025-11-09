@@ -1,0 +1,10 @@
+sudo ./capture_and_ingest.sh 
+
+
+./watch_blocked_ips.sh
+
+
+sudo sqlite3 ndpi.db "DELETE FROM blocked_ips;"
+
+
+sqlite3 ndpi.db "SELECT * FROM blocked_ips;"

@@ -1,0 +1,79 @@
+# -------------------------------
+# 🔧 Python build / environment
+# -------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+.venv/
+myenv/
+myvenv/
+
+# -------------------------------
+# 🧠 nDPI + Data Files
+# -------------------------------
+*.db
+*.sqlite3
+*.csv
+ndpi_output_*.json
+flows.csv
+/tmp/
+*.pid
+
+# -------------------------------
+# 📦 Packaging / Distribution
+# -------------------------------
+build/
+dist/
+*.egg-info/
+.eggs/
+*.spec
+
+# -------------------------------
+# 🧪 Testing / Coverage
+# -------------------------------
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.pytest_cache/
+htmlcov/
+
+# -------------------------------
+# 🧰 Logs & Backups
+# -------------------------------
+*.log
+*.bak
+*.swp
+*.swo
+*.tmp
+
+# -------------------------------
+# 🧭 IDE / Editor Settings
+# -------------------------------
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# -------------------------------
+# 💻 OS-generated files
+# -------------------------------
+.DS_Store
+Thumbs.db
+
+# -------------------------------
+# 📁 Project-specific (nDPI scripts)
+# -------------------------------
+Script/DOS/ndpi_output_*.json
+Script/DOS/flows.csv
+Script/DOS/myenv/
+Script/DOS/*.db
+Script/VPN/myenv/
+Script/VPN/*.db

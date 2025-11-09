@@ -1,0 +1,2 @@
+sudo ./script.sh wlp2s0 9
+// 9s is the time

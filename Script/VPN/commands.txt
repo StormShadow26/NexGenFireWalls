@@ -1,0 +1,4 @@
+aspire@aspire-Aspire-A715-71G:~/Desktop/Final_scripts/VPN$ sudo ./script.sh wlp2s0 20
+
+
+
