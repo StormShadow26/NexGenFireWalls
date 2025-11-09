@@ -1,0 +1,83 @@
+╔══════════════════════════════════════════════════════════════════════════╗
+║                         START HERE - QUICK START                         ║
+╚══════════════════════════════════════════════════════════════════════════╝
+
+🎯 FIRST TIME USERS - RUN THIS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+    sudo ./run_complete_test.sh
+
+This will:
+  ✓ Generate traffic automatically
+  ✓ Capture 50 packets
+  ✓ Create summary_batch_1.csv
+  ✓ Show you the results
+
+
+📁 AVAILABLE SCRIPTS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  run_complete_test.sh     ← START HERE (automated test with traffic)
+  generate_traffic.sh      ← Generate traffic separately
+  quick_test.sh            ← Quick loopback test
+  test_capture.sh          ← Basic test script
+
+
+📖 DOCUMENTATION:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  USAGE_GUIDE.md           ← Complete usage guide
+  README.md                ← Project overview
+  FLOW_DIAGRAM.md          ← Packet processing flow
+  DEBUGGING_SUMMARY.md     ← Technical details
+
+
+🚀 COMMON COMMANDS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  # Full automated test
+  sudo ./run_complete_test.sh
+
+  # Capture 50 packets
+  sudo ./capture -n 50
+
+  # Capture from loopback
+  sudo ./capture -i lo -n 20
+
+  # View results
+  cat summary_batch_1.csv
+  column -t -s, < summary_batch_1.csv
+
+
+💡 NEED TRAFFIC? Use these:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ping -c 20 8.8.8.8
+  curl https://www.google.com
+  ./generate_traffic.sh
+
+
+📊 OUTPUT:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  summary_batch_1.csv  → Traffic statistics (per-flow data)
+  Console output       → Packet drops and statistics
+
+
+🆘 TROUBLESHOOTING:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  Problem: No packets captured
+  Solution: Generate traffic first (./generate_traffic.sh)
+
+  Problem: Permission denied
+  Solution: Use sudo
+
+  Problem: Code hangs
+  Solution: Normal if no traffic - generate traffic or Ctrl+C
+
+
+✨ READY! Run: sudo ./run_complete_test.sh
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+For detailed help, read: USAGE_GUIDE.md

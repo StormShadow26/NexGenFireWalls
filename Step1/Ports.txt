@@ -1,0 +1,5 @@
+# Denylist ports (one per line)
+# Example dangerous ports - replace with actual blocked ports
+# 23
+# 1433
+# 3306

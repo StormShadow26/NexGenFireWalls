@@ -1,0 +1,710 @@
+2025-11-09 05:47:24,278 - ContinuousMonitor - INFO - 🎯 Starting Continuous Firewall Monitoring System
+2025-11-09 05:47:24,279 - ContinuousMonitor - INFO - 📊 Batch Duration: 8 seconds
+2025-11-09 05:47:24,279 - ContinuousMonitor - INFO - 🔌 Frontend URL: http://localhost:5000
+2025-11-09 05:47:24,284 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 05:47:24,291 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 05:47:24,292 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 05:47:24,293 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 05:47:25,294 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: One or more namespaces failed to connect: 
+2025-11-09 05:47:25,297 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 05:47:25,303 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 05:47:25,304 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 05:47:25,304 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 05:47:26,296 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: Client is not in a disconnected state
+2025-11-09 05:47:26,306 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: Client is not in a disconnected state
+2025-11-09 05:47:26,307 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 05:47:26,307 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 05:47:26,307 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 05:47:28,300 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 05:47:28,308 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 05:47:28,308 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 05:47:28,308 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 05:47:29,309 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: Client is not in a disconnected state
+2025-11-09 05:47:29,310 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 05:47:29,311 - ContinuousMonitor - WARNING - 🔌 Connection attempt 3 failed: One or more namespaces failed to connect: 
+2025-11-09 05:47:33,322 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 05:47:33,333 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 05:47:33,335 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 05:47:33,336 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 05:47:34,334 - ContinuousMonitor - WARNING - 🔌 Connection attempt 4 failed: One or more namespaces failed to connect: 
+2025-11-09 05:47:34,341 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 05:47:34,349 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 05:47:34,351 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 05:47:34,351 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 05:47:35,353 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 05:47:35,355 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 05:47:35,358 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 05:47:35,369 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 05:47:35,369 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 05:47:35,369 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 05:47:36,367 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 05:47:36,367 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 05:47:36,375 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 05:47:36,384 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 05:47:36,387 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 05:47:36,387 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 05:47:37,385 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 05:47:37,385 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 05:47:37,391 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 05:47:37,404 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 05:47:37,405 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 05:47:37,407 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 05:47:38,404 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 05:47:38,404 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 05:47:38,413 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 05:47:38,422 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 05:47:38,424 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 05:47:38,425 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 05:47:39,423 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 05:47:39,423 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 05:47:39,429 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 05:47:39,442 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 05:47:39,444 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 05:47:39,445 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 05:47:40,439 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 05:47:40,440 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 05:47:40,449 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 05:47:40,461 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 05:47:40,464 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 05:47:40,464 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 05:47:41,459 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 05:47:41,459 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 05:47:41,469 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 05:47:41,478 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 05:47:41,480 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 05:47:41,480 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 05:47:42,335 - ContinuousMonitor - WARNING - 🔌 Connection attempt 5 failed: Client is not in a disconnected state
+2025-11-09 05:47:42,335 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 05:47:42,336 - ContinuousMonitor - ERROR - 🔌 Cannot connect to frontend, monitoring will continue without WebSocket
+2025-11-09 05:47:42,336 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 05:47:42,336 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 05:47:42,482 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: Client is not in a disconnected state
+2025-11-09 05:47:42,482 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 05:47:42,482 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 05:47:42,490 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 05:47:43,341 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 05:47:43,352 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 05:47:43,353 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 05:47:43,353 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 05:47:44,352 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 05:47:44,353 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 05:47:44,353 - ContinuousMonitor - INFO - 📊 === BATCH 1 CYCLE START ===
+2025-11-09 05:47:44,353 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 05:47:44,359 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 05:47:44,360 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 05:47:44,374 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 05:47:44,375 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 05:47:44,375 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 05:47:44,375 - ContinuousMonitor - ERROR - 🔌 WebSocket connection error: Unable to connect
+2025-11-09 05:47:44,378 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: One or more namespaces failed to connect: /
+2025-11-09 05:47:45,380 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 05:47:45,382 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: Client is not in a disconnected state
+2025-11-09 05:47:45,383 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 05:47:45,383 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 05:47:45,383 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 05:47:45,392 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 05:47:45,394 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 05:47:45,395 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 05:47:46,384 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: Client is not in a disconnected state
+2025-11-09 05:47:46,384 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 05:47:46,384 - ContinuousMonitor - INFO - 🚀 Starting batch 2 - 100 packets over 8s
+2025-11-09 05:47:46,395 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: Client is not in a disconnected state
+2025-11-09 05:47:46,396 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 05:48:15,384 - engineio.client - ERROR - packet queue is empty, aborting
+2025-11-09 05:48:15,385 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 05:48:15,385 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 05:48:15,386 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 05:48:15,386 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 05:48:24,399 - ContinuousMonitor - ERROR - ⏰ Batch 2 timed out
+2025-11-09 05:48:24,399 - ContinuousMonitor - ERROR - ❌ Batch 1 failed
+2025-11-09 05:48:24,399 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 05:48:24,404 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 05:48:24,411 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 05:48:24,411 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 05:48:24,411 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 05:48:25,413 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: One or more namespaces failed to connect: 
+2025-11-09 05:48:25,418 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 05:48:25,429 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 05:48:25,431 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 05:48:25,431 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 05:48:26,414 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: Client is not in a disconnected state
+2025-11-09 05:48:26,414 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 05:48:26,414 - ContinuousMonitor - INFO - 📊 === BATCH 1 CYCLE END ===
+
+2025-11-09 05:48:26,414 - ContinuousMonitor - INFO - 📊 === BATCH 2 CYCLE START ===
+2025-11-09 05:48:26,415 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 05:48:26,415 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 05:48:26,429 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 05:48:26,429 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 05:48:26,435 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 05:48:26,448 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 05:48:26,448 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 05:48:26,448 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 05:48:27,415 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: Client is not in a disconnected state
+2025-11-09 05:48:27,415 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 05:48:27,415 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 05:48:27,416 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 05:48:27,444 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 05:48:27,445 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 05:48:27,453 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 05:48:27,462 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 05:48:27,465 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 05:48:27,465 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 05:48:28,416 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: Client is not in a disconnected state
+2025-11-09 05:48:28,416 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 05:48:28,416 - ContinuousMonitor - INFO - 🚀 Starting batch 3 - 100 packets over 8s
+2025-11-09 05:48:28,464 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 05:48:28,464 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 05:48:28,470 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 05:48:28,478 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 05:48:28,479 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 05:48:28,479 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 05:48:29,482 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 05:48:29,482 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 05:48:29,487 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 05:48:29,499 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 05:48:29,501 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 05:48:29,501 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 05:48:30,494 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 05:48:30,494 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 05:48:30,503 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 05:48:30,506 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 05:48:30,506 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 05:48:30,506 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 05:48:31,507 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: Client is not in a disconnected state
+2025-11-09 05:48:31,507 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 05:48:31,510 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 05:48:31,511 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 05:49:05,700 - ContinuousMonitor - INFO - 📡 Received signal 2, shutting down...
+2025-11-09 05:49:05,700 - ContinuousMonitor - INFO - 🛑 Stopping continuous monitoring...
+2025-11-09 05:49:05,700 - ContinuousMonitor - INFO - 📊 Monitoring stopped. Total batches processed: 2
+2025-11-09 05:49:05,702 - ContinuousMonitor - INFO - 🛑 Stopping continuous monitoring...
+2025-11-09 05:49:05,703 - ContinuousMonitor - INFO - 📊 Monitoring stopped. Total batches processed: 2
+2025-11-09 06:01:57,700 - ContinuousMonitor - INFO - 🎯 Starting Continuous Firewall Monitoring System
+2025-11-09 06:01:57,700 - ContinuousMonitor - INFO - 📊 Batch Duration: 10 seconds
+2025-11-09 06:01:57,700 - ContinuousMonitor - INFO - 🔌 Frontend URL: http://localhost:5000
+2025-11-09 06:01:57,702 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 06:01:57,706 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 06:01:57,706 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:01:57,706 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:01:58,707 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: Client is not in a disconnected state
+2025-11-09 06:01:58,707 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:01:58,712 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: One or more namespaces failed to connect: 
+2025-11-09 06:01:59,718 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 06:01:59,728 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 06:01:59,731 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:01:59,731 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:02:00,729 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 06:02:00,736 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 06:02:00,747 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 06:02:00,747 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:02:00,748 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:02:01,747 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 06:02:01,747 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:02:01,752 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 06:02:01,763 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 06:02:01,765 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:02:01,765 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:02:02,730 - ContinuousMonitor - WARNING - 🔌 Connection attempt 3 failed: Client is not in a disconnected state
+2025-11-09 06:02:02,766 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 06:02:02,766 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:02:02,772 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 06:02:02,784 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 06:02:02,787 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:02:02,787 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:02:03,783 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 06:02:03,783 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:02:03,791 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 06:02:03,800 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 06:02:03,802 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:02:03,803 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:02:04,801 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 06:02:04,801 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:02:04,807 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 06:02:04,821 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 06:02:04,823 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:02:04,823 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:02:05,817 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 06:02:05,817 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:02:05,828 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 06:02:05,837 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 06:02:05,839 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:02:05,840 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:02:06,730 - ContinuousMonitor - WARNING - 🔌 Connection attempt 4 failed: Client is not in a disconnected state
+2025-11-09 06:02:06,840 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 06:02:06,840 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:02:06,846 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 06:02:06,856 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 06:02:06,856 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:02:06,858 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:02:07,858 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 06:02:07,859 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:02:07,864 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 06:02:07,876 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 06:02:07,879 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:02:07,879 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:02:08,878 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 06:02:08,878 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:02:08,883 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 06:02:08,895 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 06:02:08,895 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:02:08,895 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:02:09,894 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 06:02:09,895 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:02:09,900 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 06:02:09,910 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 06:02:09,912 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:02:09,912 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:02:10,911 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 06:02:10,911 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:02:10,918 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 06:02:10,927 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 06:02:10,929 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:02:10,929 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:02:11,930 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 06:02:11,932 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:02:11,935 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 06:02:11,946 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 06:02:11,947 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:02:11,949 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:02:12,948 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 06:02:12,948 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:02:12,954 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 06:02:12,962 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 06:02:12,963 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:02:12,963 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:02:13,964 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: Client is not in a disconnected state
+2025-11-09 06:02:13,965 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:02:13,966 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 06:02:13,973 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:02:14,735 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 06:02:14,745 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 06:02:14,746 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:02:14,746 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:02:15,747 - ContinuousMonitor - WARNING - 🔌 Connection attempt 5 failed: One or more namespaces failed to connect: 
+2025-11-09 06:02:15,749 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:02:15,750 - ContinuousMonitor - ERROR - 🔌 Cannot connect to frontend, monitoring will continue without WebSocket
+2025-11-09 06:02:15,751 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:02:15,752 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 06:02:15,753 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:02:15,766 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 06:02:15,768 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:02:15,769 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:02:16,756 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: Client is not in a disconnected state
+2025-11-09 06:02:16,756 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:02:16,756 - ContinuousMonitor - INFO - 📊 === BATCH 1 CYCLE START ===
+2025-11-09 06:02:16,756 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:02:16,757 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:02:16,765 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 06:02:16,766 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:02:16,773 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 06:02:16,784 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 06:02:16,786 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:02:16,787 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:02:17,757 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: Client is not in a disconnected state
+2025-11-09 06:02:17,757 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:02:17,757 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:02:17,758 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:02:17,786 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 06:02:17,786 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:02:17,792 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 06:02:17,801 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 06:02:17,804 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:02:17,804 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:02:18,758 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: Client is not in a disconnected state
+2025-11-09 06:02:18,758 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:02:18,758 - ContinuousMonitor - INFO - 🚀 Starting batch 2 - 100 packets over 10s
+2025-11-09 06:02:18,805 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 06:02:18,807 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:02:18,809 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 06:02:18,821 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 06:02:18,824 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:02:18,824 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:02:19,819 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 06:02:19,819 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:02:19,829 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 06:02:19,841 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 06:02:19,843 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:02:19,843 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:02:20,841 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 06:02:20,841 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:02:20,849 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 06:02:20,858 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 06:02:20,861 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:02:20,861 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:02:21,861 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 06:02:21,861 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:02:21,866 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 06:02:21,875 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 06:02:21,877 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:02:21,878 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:02:22,877 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 06:02:22,877 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:02:22,883 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 06:02:22,893 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 06:02:22,895 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:02:22,895 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:02:23,895 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 06:02:23,895 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:02:23,900 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 06:02:23,913 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 06:02:23,915 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:02:23,916 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:02:24,911 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 06:02:24,912 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:02:24,922 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 06:02:24,935 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 06:02:24,937 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:02:24,938 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:02:25,935 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 06:02:25,936 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:02:25,942 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 06:02:25,952 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 06:02:25,955 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:02:25,955 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:02:26,954 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 06:02:26,954 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:02:26,960 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 06:02:26,971 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 06:02:26,973 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:02:26,974 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:02:27,970 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 06:02:27,970 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:02:27,979 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 06:02:27,987 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 06:02:27,989 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:02:27,990 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:02:28,990 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 06:02:28,993 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:02:28,995 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 06:02:29,004 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 06:02:29,006 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:02:29,006 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:02:30,006 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 06:02:30,008 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:02:30,010 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 06:02:30,021 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 06:02:30,023 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:02:30,023 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:02:31,022 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 06:02:31,023 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:02:31,028 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 06:02:31,038 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 06:02:31,040 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:02:31,040 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:02:32,040 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 06:02:32,040 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:02:32,045 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 06:02:32,056 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 06:02:32,058 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:02:32,059 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:02:33,057 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 06:02:33,057 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:02:33,064 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 06:02:33,073 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 06:02:33,075 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:02:33,075 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:02:34,076 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: Client is not in a disconnected state
+2025-11-09 06:02:34,076 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:02:34,085 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 06:02:34,085 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:02:46,388 - ContinuousMonitor - INFO - 🧠 Processing RL analysis...
+2025-11-09 06:02:46,388 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:02:46,390 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 06:02:46,393 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 06:02:46,394 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:02:46,394 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:02:47,395 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: Client is not in a disconnected state
+2025-11-09 06:02:47,395 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:02:47,398 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: One or more namespaces failed to connect: 
+2025-11-09 06:02:48,403 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 06:02:48,413 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 06:02:48,415 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:02:48,416 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:02:49,415 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 06:02:49,415 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:02:49,415 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:02:49,420 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 06:02:49,425 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 06:02:49,438 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 06:02:49,440 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:02:49,442 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:02:49,444 - ContinuousMonitor - ERROR - 🔌 WebSocket connection error: Unable to connect
+2025-11-09 06:02:49,450 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: /
+2025-11-09 06:02:49,451 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:02:50,450 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 06:02:50,461 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 06:02:50,463 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:02:50,464 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:02:51,464 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: Client is not in a disconnected state
+2025-11-09 06:02:51,464 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:03:01,752 - ContinuousMonitor - INFO - 📡 Received signal 2, shutting down...
+2025-11-09 06:03:01,752 - ContinuousMonitor - INFO - 🛑 Stopping continuous monitoring...
+2025-11-09 06:03:01,752 - ContinuousMonitor - INFO - 📊 Monitoring stopped. Total batches processed: 1
+2025-11-09 06:03:01,752 - ContinuousMonitor - INFO - 🛑 Stopping continuous monitoring...
+2025-11-09 06:03:01,752 - ContinuousMonitor - INFO - 📊 Monitoring stopped. Total batches processed: 1
+2025-11-09 06:03:38,449 - ContinuousMonitor - INFO - 🎯 Starting Continuous Firewall Monitoring System
+2025-11-09 06:03:38,450 - ContinuousMonitor - INFO - 📊 Batch Duration: 10 seconds
+2025-11-09 06:03:38,450 - ContinuousMonitor - INFO - 🔌 Frontend URL: http://localhost:5000
+2025-11-09 06:03:38,455 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 06:03:38,461 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 06:03:38,462 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:03:38,462 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:03:39,463 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: Client is not in a disconnected state
+2025-11-09 06:03:39,463 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:03:39,466 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: One or more namespaces failed to connect: 
+2025-11-09 06:03:40,471 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 06:03:40,481 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 06:03:40,483 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:03:40,483 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:03:41,483 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 06:03:41,487 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 06:03:41,497 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 06:03:41,499 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:03:41,499 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:03:42,497 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 06:03:42,497 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:03:42,505 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 06:03:42,517 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 06:03:42,520 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:03:42,520 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:03:43,485 - ContinuousMonitor - WARNING - 🔌 Connection attempt 3 failed: Client is not in a disconnected state
+2025-11-09 06:03:43,518 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 06:03:43,518 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:03:43,526 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 06:03:43,536 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 06:03:43,538 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:03:43,539 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:03:44,538 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 06:03:44,539 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:03:44,543 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 06:03:44,557 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 06:03:44,557 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:03:44,560 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:03:45,557 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 06:03:45,557 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:03:45,565 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 06:03:45,573 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 06:03:45,576 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:03:45,576 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:03:46,577 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 06:03:46,577 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:03:46,581 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 06:03:46,593 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 06:03:46,595 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:03:46,595 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:03:47,486 - ContinuousMonitor - WARNING - 🔌 Connection attempt 4 failed: Client is not in a disconnected state
+2025-11-09 06:03:47,593 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 06:03:47,593 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:03:47,600 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 06:03:47,610 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 06:03:47,612 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:03:47,613 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:03:48,612 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 06:03:48,612 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:03:48,617 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 06:03:48,626 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 06:03:48,628 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:03:48,628 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:03:49,628 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 06:03:49,629 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:03:49,635 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 06:03:49,646 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 06:03:49,648 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:03:49,648 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:03:50,646 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 06:03:50,646 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:03:50,652 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 06:03:50,666 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 06:03:50,668 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:03:50,669 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:03:51,662 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 06:03:51,663 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:03:51,674 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 06:03:51,684 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 06:03:51,684 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:03:51,685 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:03:52,684 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 06:03:52,685 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:03:52,693 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 06:03:52,703 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 06:03:52,705 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:03:52,706 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:03:53,703 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 06:03:53,703 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:03:53,711 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 06:03:53,721 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 06:03:53,722 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:03:53,723 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:03:54,722 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 06:03:54,723 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:03:54,728 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 06:03:54,740 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 06:03:54,741 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:03:54,741 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:03:55,487 - ContinuousMonitor - WARNING - 🔌 Connection attempt 5 failed: Client is not in a disconnected state
+2025-11-09 06:03:55,487 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:03:55,487 - ContinuousMonitor - ERROR - 🔌 Cannot connect to frontend, monitoring will continue without WebSocket
+2025-11-09 06:03:55,487 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:03:55,487 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:03:55,743 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 06:03:55,744 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:03:55,748 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 06:03:55,759 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 06:03:55,761 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:03:55,762 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:03:56,488 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: Client is not in a disconnected state
+2025-11-09 06:03:56,488 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:03:56,488 - ContinuousMonitor - INFO - 📊 === BATCH 1 CYCLE START ===
+2025-11-09 06:03:56,489 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:03:56,489 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:03:56,760 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 06:03:56,761 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:03:56,767 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 06:03:56,775 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 06:03:56,775 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:03:56,777 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:03:57,489 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: Client is not in a disconnected state
+2025-11-09 06:03:57,489 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:03:57,490 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:03:57,490 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:03:57,776 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 06:03:57,777 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:03:57,782 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 06:03:57,792 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 06:03:57,794 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:03:57,795 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:03:58,490 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: Client is not in a disconnected state
+2025-11-09 06:03:58,491 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:03:58,491 - ContinuousMonitor - INFO - 🚀 Starting batch 2 - 100 packets over 10s
+2025-11-09 06:03:58,794 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 06:03:58,794 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:03:58,800 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 06:03:58,811 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 06:03:58,813 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:03:58,814 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:03:59,810 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 06:03:59,810 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:03:59,817 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 06:03:59,826 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 06:03:59,827 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:03:59,828 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:04:00,829 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 06:04:00,831 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:04:00,833 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 06:04:00,842 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 06:04:00,844 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:04:00,845 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:04:01,846 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 06:04:01,849 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:04:01,851 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 06:04:01,863 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 06:04:01,863 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:04:01,865 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:04:02,863 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 06:04:02,863 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:04:02,870 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 06:04:02,881 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 06:04:02,881 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:04:02,883 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:04:03,881 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 06:04:03,881 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:04:03,887 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 06:04:03,896 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 06:04:03,896 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:04:03,896 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:04:04,897 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 06:04:04,898 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:04:04,903 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 06:04:04,914 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 06:04:04,917 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:04:04,917 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:04:05,915 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 06:04:05,915 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:04:05,921 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 06:04:05,931 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 06:04:05,933 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:04:05,934 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:04:06,931 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 06:04:06,931 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:04:06,938 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 06:04:06,947 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 06:04:06,949 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:04:06,949 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:04:07,948 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 06:04:07,948 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:04:07,954 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 06:04:07,963 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 06:04:07,965 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:04:07,966 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:04:08,964 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 06:04:08,964 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:04:08,970 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 06:04:08,981 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 06:04:08,983 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:04:08,983 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:04:09,983 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 06:04:09,983 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:04:09,988 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 06:04:09,999 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 06:04:10,001 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:04:10,002 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:04:10,996 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 06:04:10,996 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:04:11,006 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 06:04:11,016 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 06:04:11,016 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:04:11,017 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:04:12,018 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: Client is not in a disconnected state
+2025-11-09 06:04:12,019 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:04:12,019 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 06:04:12,020 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:04:38,535 - ContinuousMonitor - ERROR - ⏰ Batch 2 timed out
+2025-11-09 06:04:38,535 - ContinuousMonitor - ERROR - ❌ Batch 1 failed
+2025-11-09 06:04:38,535 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:04:38,540 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 06:04:38,550 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 06:04:38,550 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:04:38,552 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:04:39,550 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: One or more namespaces failed to connect: 
+2025-11-09 06:04:39,558 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 06:04:39,568 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 06:04:39,570 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:04:39,570 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:04:40,551 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: Client is not in a disconnected state
+2025-11-09 06:04:40,551 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:04:40,551 - ContinuousMonitor - INFO - 📊 === BATCH 1 CYCLE END ===
+
+2025-11-09 06:04:40,552 - ContinuousMonitor - INFO - 📊 === BATCH 2 CYCLE START ===
+2025-11-09 06:04:40,552 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:04:40,552 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:04:40,569 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 06:04:40,570 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:04:40,575 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 06:04:40,587 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 06:04:40,589 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:04:40,590 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:04:41,552 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: Client is not in a disconnected state
+2025-11-09 06:04:41,553 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:04:41,553 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:04:41,553 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:04:41,589 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 06:04:41,589 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:04:41,595 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 06:04:41,605 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 06:04:41,607 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:04:41,608 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:04:42,553 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: Client is not in a disconnected state
+2025-11-09 06:04:42,553 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:04:42,554 - ContinuousMonitor - INFO - 🚀 Starting batch 3 - 100 packets over 10s
+2025-11-09 06:04:42,604 - ContinuousMonitor - WARNING - 🔌 Connection attempt 2 failed: One or more namespaces failed to connect: 
+2025-11-09 06:04:42,604 - ContinuousMonitor - ERROR - 🔌 Failed to connect to frontend after all retries
+2025-11-09 06:04:42,613 - engineio.client - ERROR - websocket-client package not installed, only polling transport is available
+2025-11-09 06:04:42,626 - ContinuousMonitor - INFO - 🔌 Connected to frontend WebSocket
+2025-11-09 06:04:42,628 - ContinuousMonitor - WARNING - 🔌 Not connected to frontend, attempting reconnection...
+2025-11-09 06:04:42,629 - ContinuousMonitor - WARNING - 🔌 Connection attempt 1 failed: Client is not in a disconnected state
+2025-11-09 06:04:42,670 - ContinuousMonitor - INFO - 📡 Received signal 2, shutting down...
+2025-11-09 06:04:42,671 - ContinuousMonitor - INFO - 🛑 Stopping continuous monitoring...
+2025-11-09 06:04:42,671 - ContinuousMonitor - INFO - 📊 Monitoring stopped. Total batches processed: 2
+2025-11-09 06:04:42,674 - ContinuousMonitor - INFO - 🛑 Stopping continuous monitoring...
+2025-11-09 06:04:42,674 - ContinuousMonitor - INFO - 📊 Monitoring stopped. Total batches processed: 2

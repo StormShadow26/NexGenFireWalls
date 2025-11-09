@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔥🤖 Continuous Firewall Monitor</title>
+    
+    <!-- External Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.2/socket.io.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            min-height: 100vh;
+        }
+        
+        .header {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .status-badge {
+            display: inline-block;
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin: 0 0.5rem;
+        }
+        
+        .status-connected { background: #4CAF50; }
+        .status-capturing { background: #FF9800; }
+        .status-analyzing { background: #2196F3; }
+        .status-disconnected { background: #F44336; }
+        .status-error { background: #E91E63; }
+        
+        .dashboard {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 1rem;
+            padding: 1rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+        
+        .card h3 {
+            margin-bottom: 1rem;
+            color: #fff;
+            display: flex;
+            align-items: center;
+        }
+        
+        .card-icon {
+            font-size: 1.5rem;
+            margin-right: 0.5rem;
+        }
+        
+        .metric {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.8rem;
+            padding: 0.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+        }
+        
+        .metric-value {
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .chart-container {
+            position: relative;
+            height: 300px;
+            margin-top: 1rem;
+        }
+        
+        .batch-timeline {
+            grid-column: 1 / -1;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        
+        .batch-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.8rem;
+            margin-bottom: 0.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            border-left: 4px solid #4CAF50;
+        }
+        
+        .batch-item.active {
+            border-left-color: #FF9800;
+            background: rgba(255, 152, 0, 0.2);
+        }
+        
+        .batch-info {
+            flex: 1;
+        }
+        
+        .batch-stats {
+            display: flex;
+            gap: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        .stat-pill {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.2rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 10px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+            overflow: hidden;
+            margin-top: 0.5rem;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #4CAF50, #8BC34A);
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+        
+        .log-container {
+            grid-column: 1 / -1;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            padding: 1rem;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+        
+        .log-entry {
+            margin-bottom: 0.3rem;
+            padding: 0.2rem 0;
+        }
+        
+        .log-timestamp {
+            color: #888;
+        }
+        
+        .log-info { color: #4CAF50; }
+        .log-warning { color: #FF9800; }
+        .log-error { color: #F44336; }
+        
+        /* Packet Details Styling */
+        #packetDetails {
+            max-height: 300px;
+            overflow-y: auto;
+            font-size: 0.9rem;
+        }
+        
+        .packet-item {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 0.8rem;
+            margin-bottom: 0.5rem;
+            border-left: 4px solid #4CAF50;
+            transition: all 0.3s ease;
+        }
+        
+        .packet-item:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateX(5px);
+        }
+        
+        .packet-item.external {
+            border-left-color: #FF9800;
+        }
+        
+        .packet-item.local {
+            border-left-color: #2196F3;
+        }
+        
+        .packet-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.3rem;
+        }
+        
+        .packet-flow {
+            font-family: 'Courier New', monospace;
+            font-size: 0.85rem;
+            color: #E0E0E0;
+        }
+        
+        .packet-details {
+            font-size: 0.8rem;
+            color: #B0B0B0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.3rem;
+        }
+        
+        .risk-indicator {
+            padding: 0.2rem 0.5rem;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: bold;
+        }
+        
+        .risk-low { background: rgba(76, 175, 80, 0.3); color: #4CAF50; }
+        .risk-medium { background: rgba(255, 152, 0, 0.3); color: #FF9800; }
+        .risk-high { background: rgba(244, 67, 54, 0.3); color: #F44336; }
+        
+        /* CSV Results Styling */
+        #csvResults {
+            max-height: 400px;
+            overflow: auto;
+        }
+        
+        .csv-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.8rem;
+            background: rgba(255, 255, 255, 0.05);
+        }
+        
+        .csv-table th,
+        .csv-table td {
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 0.5rem 0.3rem;
+            text-align: left;
+            vertical-align: top;
+        }
+        
+        .csv-table th {
+            background: rgba(255, 255, 255, 0.1);
+            font-weight: bold;
+            font-size: 0.75rem;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        
+        .csv-table tr:nth-child(even) {
+            background: rgba(255, 255, 255, 0.05);
+        }
+        
+        .csv-table tr:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .csv-info {
+            text-align: center;
+            padding: 2rem;
+            color: #888;
+        }
+        
+        .csv-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .csv-meta {
+            color: #888;
+            font-size: 0.8rem;
+        }
+        
+        .action-allow { color: #4CAF50; font-weight: bold; }
+        .action-deny { color: #F44336; font-weight: bold; }
+        .action-inspect { color: #FF9800; font-weight: bold; }
+        
+        .connection-status {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            z-index: 1000;
+        }
+        
+        @media (max-width: 1200px) {
+            .dashboard {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .dashboard {
+                grid-template-columns: 1fr;
+                padding: 0.5rem;
+            }
+            
+            .card {
+                padding: 1rem;
+            }
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.7; }
+            100% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🔥🤖 Continuous Firewall Monitor</h1>
+        <div class="status-display">
+            <span id="monitorStatus" class="status-badge status-disconnected">Disconnected</span>
+            <span id="batchCount" class="status-badge status-connected">Batches: 0</span>
+            <span id="uptime" class="status-badge status-connected">Uptime: 0s</span>
+        </div>
+    </div>
+    
+    <div id="connectionStatus" class="connection-status status-disconnected">
+        🔌 Connecting to monitoring system...
+    </div>
+    
+    <div class="dashboard">
+        <!-- Current Batch Status -->
+        <div class="card">
+            <h3><span class="card-icon">📊</span>Current Batch</h3>
+            <div id="currentBatch">
+                <div class="metric">
+                    <span>Batch ID:</span>
+                    <span id="currentBatchId" class="metric-value">-</span>
+                </div>
+                <div class="metric">
+                    <span>Status:</span>
+                    <span id="currentBatchStatus" class="metric-value">Waiting</span>
+                </div>
+                <div class="metric">
+                    <span>Duration:</span>
+                    <span id="currentBatchDuration" class="metric-value">10s</span>
+                </div>
+                <div class="progress-bar">
+                    <div id="batchProgress" class="progress-fill"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Traffic Analysis -->
+        <div class="card">
+            <h3><span class="card-icon">🌐</span>Traffic Analysis</h3>
+            <div id="trafficStats">
+                <div class="metric">
+                    <span>Total Flows:</span>
+                    <span id="totalFlows" class="metric-value">0</span>
+                </div>
+                <div class="metric">
+                    <span>External Flows:</span>
+                    <span id="externalFlows" class="metric-value">0</span>
+                </div>
+                <div class="metric">
+                    <span>Local Flows:</span>
+                    <span id="localFlows" class="metric-value">0</span>
+                </div>
+                <div class="metric">
+                    <span>External Ratio:</span>
+                    <span id="externalRatio" class="metric-value">0%</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Decision Tree Predictions -->
+        <div class="card">
+            <h3><span class="card-icon">🌳</span>Decision Tree Predictions</h3>
+            <div id="rlStats">
+                <div class="metric">
+                    <span>🟢 Allow:</span>
+                    <span id="allowCount" class="metric-value">0</span>
+                </div>
+                <div class="metric">
+                    <span>🔴 Deny:</span>
+                    <span id="denyCount" class="metric-value">0</span>
+                </div>
+                <div class="metric">
+                    <span>🔍 Inspect:</span>
+                    <span id="inspectCount" class="metric-value">0</span>
+                </div>
+                <div class="metric">
+                    <span>Confidence:</span>
+                    <span id="avgConfidence" class="metric-value">0%</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Traffic Chart -->
+        <div class="card">
+            <h3><span class="card-icon">📈</span>Traffic Trends</h3>
+            <div class="chart-container">
+                <canvas id="trafficChart"></canvas>
+            </div>
+        </div>
+        
+        <!-- Decision Tree Predictions Chart -->
+        <div class="card">
+            <h3><span class="card-icon">🌳</span>Decision Tree Trends</h3>
+            <div class="chart-container">
+                <canvas id="predictionsChart"></canvas>
+            </div>
+        </div>
+        
+        <!-- Performance Chart -->
+        <div class="card">
+            <h3><span class="card-icon">⚡</span>Performance Metrics</h3>
+            <div class="chart-container">
+                <canvas id="performanceChart"></canvas>
+            </div>
+        </div>
+        
+        <!-- Batch Timeline -->
+        <div class="card batch-timeline">
+            <h3><span class="card-icon">⏱️</span>Batch Timeline</h3>
+            <div id="batchTimeline">
+                <div class="batch-item">
+                    <div class="batch-info">
+                        <strong>Waiting for first batch...</strong>
+                        <div>Monitor will start shortly</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Packet Details -->
+        <div class="card">
+            <h3><span class="card-icon">📦</span>Live Packet Details</h3>
+            <div id="packetDetails">
+                <div class="packet-item">
+                    <div class="packet-info">
+                        <strong>No packets captured yet</strong>
+                        <div>Packet details will appear here during monitoring</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Decision Tree CSV Results -->
+        <div class="card">
+            <h3><span class="card-icon">🗂️</span>Decision Tree CSV Results</h3>
+            <div id="csvResults">
+                <div class="csv-info">
+                    <strong>No CSV data available yet</strong>
+                    <div>Decision tree results will appear here after each batch</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- System Log -->
+        <div class="card log-container">
+            <h3><span class="card-icon">📝</span>System Log</h3>
+            <div id="systemLog">
+                <div class="log-entry log-info">
+                    <span class="log-timestamp">[--:--:--]</span> Dashboard initialized, waiting for monitoring system...
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        class FirewallDashboard {
+            constructor() {
+                this.socket = io();
+                this.batchHistory = [];
+                this.currentBatch = null;
+                this.charts = {};
+                
+                this.initializeCharts();
+                this.setupSocketHandlers();
+                this.startUIUpdates();
+                
+                this.addLog('Dashboard initialized', 'info');
+            }
+            
+            setupSocketHandlers() {
+                this.socket.on('connect', () => {
+                    this.updateConnectionStatus('connected');
+                    this.addLog('Connected to monitoring system', 'info');
+                });
+                
+                this.socket.on('disconnect', () => {
+                    this.updateConnectionStatus('disconnected');
+                    this.addLog('Disconnected from monitoring system', 'warning');
+                });
+                
+                this.socket.on('monitor_status', (data) => {
+                    this.updateMonitorStatus(data);
+                });
+                
+                this.socket.on('batch_start', (data) => {
+                    this.handleBatchStart(data);
+                });
+                
+                this.socket.on('batch_completed', (data) => {
+                    this.handleBatchCompleted(data);
+                });
+                
+                this.socket.on('batch_history_update', (data) => {
+                    this.updateCharts();
+                });
+                
+                // Request initial data
+                this.socket.emit('request_dashboard_data');
+            }
+            
+            updateConnectionStatus(status) {
+                const statusEl = document.getElementById('connectionStatus');
+                statusEl.className = `connection-status status-${status}`;
+                
+                const messages = {
+                    connected: '🔌 Connected to monitoring system',
+                    disconnected: '🔌 Disconnected from monitoring system',
+                    error: '🔌 Connection error'
+                };
+                
+                statusEl.textContent = messages[status] || '🔌 Unknown status';
+            }
+            
+            updateMonitorStatus(data) {
+                document.getElementById('monitorStatus').textContent = data.status.toUpperCase();
+                document.getElementById('monitorStatus').className = `status-badge status-${data.status}`;
+                
+                document.getElementById('batchCount').textContent = `Batches: ${data.batch_count}`;
+                document.getElementById('uptime').textContent = `Uptime: ${this.formatDuration(data.uptime)}`;
+                
+                this.addLog(`Monitor status: ${data.status} (Batch ${data.batch_count})`, 'info');
+            }
+            
+            handleBatchStart(data) {
+                this.currentBatch = data;
+                document.getElementById('currentBatchId').textContent = data.batch_id;
+                document.getElementById('currentBatchStatus').textContent = 'Capturing';
+                document.getElementById('currentBatchDuration').textContent = `${data.duration}s`;
+                
+                this.addBatchToTimeline(data, 'active');
+                this.addLog(`Batch ${data.batch_id} started - capturing for ${data.duration}s`, 'info');
+                
+                this.startBatchProgress(data.duration);
+            }
+            
+            handleBatchCompleted(data) {
+                this.batchHistory.push(data);
+                
+                // Update current batch display
+                document.getElementById('currentBatchStatus').textContent = 'Completed';
+                
+                // Update stats
+                this.updateTrafficStats(data.traffic);
+                this.updateDecisionTreeStats(data.predictions);
+                
+                // Update packet details
+                this.updatePacketDetails(data.packet_details || []);
+                
+                // Update CSV results if available
+                if (data.csv_data) {
+                    console.log('Updating CSV results:', data.csv_data);
+                    this.updateCSVResults(data.csv_data);
+                }
+                
+                // Update timeline
+                this.updateBatchInTimeline(data.batch_id, data);
+                
+                this.addLog(`Batch ${data.batch_id} completed - ${data.traffic.total_flows} flows, ${data.traffic.external_ratio.toFixed(1)}% external`, 'info');
+                
+                // Update charts
+                this.updateCharts();
+                
+                // Clear current batch after 2 seconds
+                setTimeout(() => {
+                    if (this.currentBatch && this.currentBatch.batch_id === data.batch_id) {
+                        document.getElementById('currentBatchStatus').textContent = 'Waiting';
+                        document.getElementById('currentBatchId').textContent = '-';
+                    }
+                }, 2000);
+            }
+            
+            updateTrafficStats(traffic) {
+                document.getElementById('totalFlows').textContent = traffic.total_flows;
+                document.getElementById('externalFlows').textContent = traffic.external_flows;
+                document.getElementById('localFlows').textContent = traffic.local_flows;
+                document.getElementById('externalRatio').textContent = `${traffic.external_ratio.toFixed(1)}%`;
+            }
+            
+            updateDecisionTreeStats(predictions) {
+                document.getElementById('allowCount').textContent = predictions.allow;
+                document.getElementById('denyCount').textContent = predictions.deny;
+                document.getElementById('inspectCount').textContent = predictions.inspect;
+                document.getElementById('avgConfidence').textContent = `${(predictions.avg_confidence * 100).toFixed(1)}%`;
+            }
+            
+            updatePacketDetails(packets) {
+                const container = document.getElementById('packetDetails');
+                
+                if (!packets || packets.length === 0) {
+                    container.innerHTML = `
+                        <div class="packet-item">
+                            <div class="packet-info">
+                                <strong>No packets in current batch</strong>
+                                <div>Packet details will appear when traffic is captured</div>
+                            </div>
+                        </div>
+                    `;
+                    return;
+                }
+                
+                // Show up to 10 most recent packets
+                const recentPackets = packets.slice(-10);
+                
+                container.innerHTML = recentPackets.map(packet => {
+                    const typeClass = packet.traffic_type.toLowerCase().replace('_', '-');
+                    const riskClass = this.getRiskClass(packet.flow_size, packet.traffic_type);
+                    
+                    return `
+                        <div class="packet-item ${typeClass} fade-in">
+                            <div class="packet-header">
+                                <span class="packet-flow">
+                                    ${packet.type_icon} ${packet.src_ip}:${packet.src_port} → ${packet.dst_ip}:${packet.dst_port}
+                                </span>
+                                <span class="risk-indicator ${riskClass}">
+                                    ${this.getRiskLabel(packet.flow_size, packet.traffic_type)}
+                                </span>
+                            </div>
+                            <div class="packet-details">
+                                <span>🔧 ${packet.protocol}</span>
+                                <span>📊 ${packet.flow_size}B total</span>
+                                <span>📤 ${packet.bytes_sent}B sent</span>  
+                                <span>📥 ${packet.bytes_received}B received</span>
+                                <span>🕒 ${new Date(packet.timestamp).toLocaleTimeString()}</span>
+                                <span>🏷️ ${packet.traffic_type}</span>
+                            </div>
+                        </div>
+                    `;
+                }).join('');
+                
+                // Auto-scroll to show latest packets
+                container.scrollTop = container.scrollHeight;
+            }
+            
+            getRiskClass(flowSize, trafficType) {
+                if (trafficType === 'EXTERNAL') {
+                    if (flowSize > 10000) return 'risk-medium';
+                    if (flowSize > 50000) return 'risk-high';
+                }
+                return 'risk-low';
+            }
+            
+            getRiskLabel(flowSize, trafficType) {
+                if (trafficType === 'EXTERNAL') {
+                    if (flowSize > 50000) return '🔴 HIGH';
+                    if (flowSize > 10000) return '🟡 MEDIUM';
+                }
+                return '🟢 LOW';
+            }
+            
+            updateCSVResults(csvData) {
+                const container = document.getElementById('csvResults');
+                
+                if (!csvData || !csvData.rows || csvData.rows.length === 0) {
+                    container.innerHTML = '<div class="csv-info">No CSV data available yet. Start monitoring to see results.</div>';
+                    return;
+                }
+                
+                const { headers, rows, total_rows, file_name } = csvData;
+                
+                container.innerHTML = `
+                    <div class="csv-header">
+                        <strong>Decision Tree Classification Results</strong>
+                        <div class="csv-meta">
+                            File: ${file_name || 'Unknown'} | Rows: ${total_rows || rows.length}
+                        </div>
+                    </div>
+                    <table class="csv-table">
+                        <thead>
+                            <tr>
+                                ${headers.map(header => `<th>${header}</th>`).join('')}
+                            </tr>
+                        </thead>
+                        <tbody>
+                            ${rows.map(row => `
+                                <tr>
+                                    ${row.map((cell, index) => {
+                                        let content = cell;
+                                        let className = '';
+                                        
+                                        // Special formatting for specific columns
+                                        if (headers[index] === 'Action' || headers[index] === 'action') {
+                                            className = `action-${cell.toLowerCase()}`;
+                                        }
+                                        
+                                        return `<td class="${className}">${content}</td>`;
+                                    }).join('')}
+                                </tr>
+                            `).join('')}
+                        </tbody>
+                    </table>
+                `;
+            }
+            
+            addBatchToTimeline(batch, status = 'completed') {
+                const timeline = document.getElementById('batchTimeline');
+                
+                const batchEl = document.createElement('div');
+                batchEl.className = `batch-item ${status} fade-in`;
+                batchEl.id = `batch-${batch.batch_id}`;
+                
+                batchEl.innerHTML = `
+                    <div class="batch-info">
+                        <strong>Batch ${batch.batch_id}</strong>
+                        <div class="batch-stats">
+                            <span class="stat-pill">Duration: ${batch.duration || 10}s</span>
+                            <span class="stat-pill">Status: ${status}</span>
+                            <span class="stat-pill">Time: ${new Date(batch.start_time || batch.completion_time).toLocaleTimeString()}</span>
+                        </div>
+                    </div>
+                `;
+                
+                timeline.insertBefore(batchEl, timeline.firstChild);
+                
+                // Keep only last 20 items
+                const items = timeline.querySelectorAll('.batch-item');
+                if (items.length > 20) {
+                    timeline.removeChild(items[items.length - 1]);
+                }
+            }
+            
+            updateBatchInTimeline(batchId, data) {
+                const batchEl = document.getElementById(`batch-${batchId}`);
+                if (batchEl) {
+                    batchEl.className = 'batch-item completed fade-in';
+                    batchEl.innerHTML = `
+                        <div class="batch-info">
+                            <strong>Batch ${batchId}</strong>
+                            <div class="batch-stats">
+                                <span class="stat-pill">Flows: ${data.traffic.total_flows}</span>
+                                <span class="stat-pill">External: ${data.traffic.external_ratio.toFixed(1)}%</span>
+                                <span class="stat-pill">Confidence: ${(data.predictions.avg_confidence * 100).toFixed(1)}%</span>
+                                <span class="stat-pill">${new Date(data.completion_time).toLocaleTimeString()}</span>
+                            </div>
+                        </div>
+                    `;
+                }
+            }
+            
+            startBatchProgress(duration) {
+                const progressBar = document.getElementById('batchProgress');
+                let progress = 0;
+                const interval = 100; // Update every 100ms
+                const increment = (interval / 1000) / duration * 100;
+                
+                const timer = setInterval(() => {
+                    progress += increment;
+                    progressBar.style.width = `${Math.min(progress, 100)}%`;
+                    
+                    if (progress >= 100) {
+                        clearInterval(timer);
+                        setTimeout(() => {
+                            progressBar.style.width = '0%';
+                        }, 1000);
+                    }
+                }, interval);
+            }
+            
+            initializeCharts() {
+                // Traffic Chart
+                this.charts.traffic = new Chart(document.getElementById('trafficChart'), {
+                    type: 'line',
+                    data: {
+                        labels: [],
+                        datasets: [{
+                            label: 'Total Flows',
+                            data: [],
+                            borderColor: '#4CAF50',
+                            backgroundColor: 'rgba(76, 175, 80, 0.1)',
+                            tension: 0.4
+                        }, {
+                            label: 'External Flows',
+                            data: [],
+                            borderColor: '#2196F3',
+                            backgroundColor: 'rgba(33, 150, 243, 0.1)',
+                            tension: 0.4
+                        }]
+                    },
+                    options: this.getChartOptions('Flows per Batch')
+                });
+                
+                // Decision Tree Predictions Chart
+                this.charts.predictions = new Chart(document.getElementById('predictionsChart'), {
+                    type: 'bar',
+                    data: {
+                        labels: [],
+                        datasets: [{
+                            label: 'Allow',
+                            data: [],
+                            backgroundColor: '#4CAF50'
+                        }, {
+                            label: 'Deny',
+                            data: [],
+                            backgroundColor: '#F44336'
+                        }, {
+                            label: 'Inspect',
+                            data: [],
+                            backgroundColor: '#FF9800'
+                        }]
+                    },
+                    options: this.getChartOptions('Predictions per Batch')
+                });
+                
+                // Performance Chart
+                this.charts.performance = new Chart(document.getElementById('performanceChart'), {
+                    type: 'line',
+                    data: {
+                        labels: [],
+                        datasets: [{
+                            label: 'Confidence (%)',
+                            data: [],
+                            borderColor: '#9C27B0',
+                            backgroundColor: 'rgba(156, 39, 176, 0.1)',
+                            tension: 0.4,
+                            yAxisID: 'y'
+                        }, {
+                            label: 'External Ratio (%)',
+                            data: [],
+                            borderColor: '#FF5722',
+                            backgroundColor: 'rgba(255, 87, 34, 0.1)',
+                            tension: 0.4,
+                            yAxisID: 'y'
+                        }]
+                    },
+                    options: {
+                        ...this.getChartOptions('Performance Metrics'),
+                        scales: {
+                            y: {
+                                type: 'linear',
+                                display: true,
+                                position: 'left',
+                                min: 0,
+                                max: 100,
+                                grid: { color: 'rgba(255, 255, 255, 0.1)' },
+                                ticks: { color: '#fff' }
+                            }
+                        }
+                    }
+                });
+            }
+            
+            getChartOptions(title) {
+                return {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: title,
+                            color: '#fff'
+                        },
+                        legend: {
+                            labels: { color: '#fff' }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            grid: { color: 'rgba(255, 255, 255, 0.1)' },
+                            ticks: { color: '#fff' }
+                        },
+                        y: {
+                            grid: { color: 'rgba(255, 255, 255, 0.1)' },
+                            ticks: { color: '#fff' }
+                        }
+                    }
+                };
+            }
+            
+            updateCharts() {
+                const recent = this.batchHistory.slice(-10); // Last 10 batches
+                
+                if (recent.length === 0) return;
+                
+                // Update traffic chart
+                this.charts.traffic.data.labels = recent.map(b => `B${b.batch_id}`);
+                this.charts.traffic.data.datasets[0].data = recent.map(b => b.traffic.total_flows);
+                this.charts.traffic.data.datasets[1].data = recent.map(b => b.traffic.external_flows);
+                this.charts.traffic.update();
+                
+                // Update predictions chart
+                this.charts.predictions.data.labels = recent.map(b => `B${b.batch_id}`);
+                this.charts.predictions.data.datasets[0].data = recent.map(b => b.predictions.allow);
+                this.charts.predictions.data.datasets[1].data = recent.map(b => b.predictions.deny);
+                this.charts.predictions.data.datasets[2].data = recent.map(b => b.predictions.inspect);
+                this.charts.predictions.update();
+                
+                // Update performance chart
+                this.charts.performance.data.labels = recent.map(b => `B${b.batch_id}`);
+                this.charts.performance.data.datasets[0].data = recent.map(b => b.predictions.avg_confidence * 100);
+                this.charts.performance.data.datasets[1].data = recent.map(b => b.traffic.external_ratio);
+                this.charts.performance.update();
+            }
+            
+            addLog(message, type = 'info') {
+                const logContainer = document.getElementById('systemLog');
+                const timestamp = new Date().toLocaleTimeString();
+                
+                const logEntry = document.createElement('div');
+                logEntry.className = `log-entry log-${type}`;
+                logEntry.innerHTML = `<span class="log-timestamp">[${timestamp}]</span> ${message}`;
+                
+                logContainer.insertBefore(logEntry, logContainer.firstChild);
+                
+                // Keep only last 50 log entries
+                const entries = logContainer.querySelectorAll('.log-entry');
+                if (entries.length > 50) {
+                    logContainer.removeChild(entries[entries.length - 1]);
+                }
+            }
+            
+            formatDuration(seconds) {
+                const h = Math.floor(seconds / 3600);
+                const m = Math.floor((seconds % 3600) / 60);
+                const s = Math.floor(seconds % 60);
+                
+                if (h > 0) return `${h}h ${m}m ${s}s`;
+                if (m > 0) return `${m}m ${s}s`;
+                return `${s}s`;
+            }
+            
+            startUIUpdates() {
+                // Update timestamps and other dynamic content
+                setInterval(() => {
+                    // Update any time-based displays here
+                }, 1000);
+            }
+        }
+        
+        // Initialize dashboard when page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            window.dashboard = new FirewallDashboard();
+        });
+    </script>
+</body>
+</html>

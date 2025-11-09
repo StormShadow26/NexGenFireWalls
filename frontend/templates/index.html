@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔥 RL Firewall Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <div class="grid-lines"></div>
+        <canvas id="particleCanvas"></canvas>
+    </div>
+
+    <!-- Header -->
+    <header class="dashboard-header">
+        <div class="header-left">
+            <div class="logo">
+                <span class="logo-icon">🔥</span>
+                <h1>RL Firewall <span class="gradient-text">AI</span></h1>
+            </div>
+            <div class="status-indicator">
+                <span class="status-dot pulsing" id="systemStatus"></span>
+                <span id="statusText">System Ready</span>
+            </div>
+        </div>
+        <div class="header-right">
+            <div class="uptime-display">
+                <span class="uptime-label">UPTIME</span>
+                <span class="uptime-value" id="uptime">00:00:00</span>
+            </div>
+            <button class="control-btn start-btn" id="startBtn" onclick="startCapture()">
+                <span class="btn-icon">▶</span> START
+            </button>
+            <button class="control-btn stop-btn" id="stopBtn" onclick="stopCapture()" disabled>
+                <span class="btn-icon">⏸</span> STOP
+            </button>
+            <button class="control-btn reset-btn" onclick="resetStats()">
+                <span class="btn-icon">↻</span> RESET
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Dashboard -->
+    <main class="dashboard-content">
+        <!-- Stats Overview -->
+        <section class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">📦</div>
+                <div class="stat-info">
+                    <div class="stat-label">Total Packets</div>
+                    <div class="stat-value" id="totalPackets">0</div>
+                </div>
+                <div class="stat-graph">
+                    <div class="mini-bar"></div>
+                </div>
+            </div>
+
+            <div class="stat-card allowed">
+                <div class="stat-icon">✅</div>
+                <div class="stat-info">
+                    <div class="stat-label">Allowed</div>
+                    <div class="stat-value" id="allowedPackets">0</div>
+                </div>
+                <div class="stat-percentage" id="allowedPercent">0%</div>
+            </div>
+
+            <div class="stat-card denied">
+                <div class="stat-icon">🚫</div>
+                <div class="stat-info">
+                    <div class="stat-label">Denied</div>
+                    <div class="stat-value" id="deniedPackets">0</div>
+                </div>
+                <div class="stat-percentage" id="deniedPercent">0%</div>
+            </div>
+
+            <div class="stat-card inspected">
+                <div class="stat-icon">🔍</div>
+                <div class="stat-info">
+                    <div class="stat-label">Inspected</div>
+                    <div class="stat-value" id="inspectedPackets">0</div>
+                </div>
+                <div class="stat-percentage" id="inspectedPercent">0%</div>
+            </div>
+
+            <div class="stat-card blocked">
+                <div class="stat-icon">🛡️</div>
+                <div class="stat-info">
+                    <div class="stat-label">Blocked by Denylist</div>
+                    <div class="stat-value" id="blockedPackets">0</div>
+                </div>
+                <div class="stat-percentage" id="blockedPercent">0%</div>
+            </div>
+
+            <div class="stat-card blocked">
+                <div class="stat-icon">⚠️</div>
+                <div class="stat-info">
+                    <div class="stat-label">Blocked Malformed</div>
+                    <div class="stat-value" id="malformedPackets">0</div>
+                </div>
+                <div class="stat-percentage" id="malformedPercent">0%</div>
+            </div>
+
+            <div class="stat-card blocked">
+                <div class="stat-icon">⏱️</div>
+                <div class="stat-info">
+                    <div class="stat-label">Rate Limited</div>
+                    <div class="stat-value" id="ratelimitPackets">0</div>
+                </div>
+                <div class="stat-percentage" id="ratelimitPercent">0%</div>
+            </div>
+
+            <div class="stat-card ml">
+                <div class="stat-icon">🤖</div>
+                <div class="stat-info">
+                    <div class="stat-label">ML Analyzed</div>
+                    <div class="stat-value" id="mlPackets">0</div>
+                </div>
+                <div class="stat-percentage" id="mlPercent">0%</div>
+            </div>
+        </section>
+
+        <!-- Pipeline Visualization -->
+        <section class="pipeline-section">
+            <h2 class="section-title">
+                <span class="title-icon">🔄</span>
+                Packet Processing Pipeline
+            </h2>
+            <div class="pipeline-container">
+                <!-- Stage 1: Incoming -->
+                <div class="pipeline-stage" id="stage-incoming">
+                    <div class="stage-header">
+                        <span class="stage-number">1</span>
+                        <h3>Incoming Packets</h3>
+                    </div>
+                    <div class="stage-content">
+                        <div class="packet-list" id="incomingList">
+                            <div class="empty-state">Waiting for packets...</div>
+                        </div>
+                    </div>
+                    <div class="stage-counter" id="incomingCounter">0</div>
+                </div>
+
+                <!-- Arrow -->
+                <div class="pipeline-arrow">
+                    <div class="arrow-line"></div>
+                    <div class="arrow-head">→</div>
+                    <div class="arrow-label">Check</div>
+                </div>
+
+                <!-- Stage 2: Denylist Check -->
+                <div class="pipeline-stage" id="stage-denylist">
+                    <div class="stage-header">
+                        <span class="stage-number">2</span>
+                        <h3>Denylist Filter</h3>
+                    </div>
+                    <div class="stage-content">
+                        <div class="packet-list" id="denylistList">
+                            <div class="empty-state">No blocked packets</div>
+                        </div>
+                    </div>
+                    <div class="stage-counter blocked-counter" id="denylistCounter">0</div>
+                </div>
+
+                <!-- Arrow -->
+                <div class="pipeline-arrow">
+                    <div class="arrow-line pass"></div>
+                    <div class="arrow-head pass">→</div>
+                    <div class="arrow-label pass">Pass</div>
+                </div>
+
+                <!-- Stage 3: Malformed Check -->
+                <div class="pipeline-stage" id="stage-malformed">
+                    <div class="stage-header">
+                        <span class="stage-number">3</span>
+                        <h3>Malformed Filter</h3>
+                    </div>
+                    <div class="stage-content">
+                        <div class="packet-list" id="malformedList">
+                            <div class="empty-state">No malformed packets</div>
+                        </div>
+                    </div>
+                    <div class="stage-counter blocked-counter" id="malformedCounter">0</div>
+                </div>
+
+                <!-- Arrow -->
+                <div class="pipeline-arrow">
+                    <div class="arrow-line pass"></div>
+                    <div class="arrow-head pass">→</div>
+                    <div class="arrow-label pass">Pass</div>
+                </div>
+
+                <!-- Stage 4: Rate Limiter -->
+                <div class="pipeline-stage" id="stage-ratelimit">
+                    <div class="stage-header">
+                        <span class="stage-number">4</span>
+                        <h3>Rate Limiter</h3>
+                    </div>
+                    <div class="stage-content">
+                        <div class="packet-list" id="ratelimitList">
+                            <div class="empty-state">No rate limit violations</div>
+                        </div>
+                    </div>
+                    <div class="stage-counter blocked-counter" id="ratelimitCounter">0</div>
+                </div>
+
+                <!-- Arrow -->
+                <div class="pipeline-arrow">
+                    <div class="arrow-line pass"></div>
+                    <div class="arrow-head pass">→</div>
+                    <div class="arrow-label pass">Pass</div>
+                </div>
+
+                <!-- Stage 5: ML Model -->
+                <div class="pipeline-stage" id="stage-ml">
+                    <div class="stage-header">
+                        <span class="stage-number">5</span>
+                        <h3>ML Model</h3>
+                    </div>
+                    <div class="stage-content">
+                        <div class="packet-list" id="mlList">
+                            <div class="empty-state">Awaiting analysis...</div>
+                        </div>
+                    </div>
+                    <div class="stage-counter ml-counter" id="mlCounter">0</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Live Feed -->
+        <section class="live-feed-section">
+            <h2 class="section-title">
+                <span class="title-icon">📡</span>
+                Live Activity Feed
+                <span class="feed-toggle" onclick="toggleFeed()">
+                    <span id="feedToggleText">Pause</span>
+                </span>
+            </h2>
+            <div class="live-feed" id="liveFeed">
+                <div class="feed-item welcome">
+                    <span class="feed-time">--:--:--</span>
+                    <span class="feed-message">🔥 Firewall Dashboard Initialized - Ready to protect your network</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Denylist Info -->
+        <section class="denylist-section">
+            <h2 class="section-title">
+                <span class="title-icon">📋</span>
+                Denylist Configuration
+            </h2>
+            <div class="denylist-grid">
+                <div class="denylist-card">
+                    <h3>🚫 Blocked IPs</h3>
+                    <div class="denylist-count" id="deniedIpCount">0</div>
+                    <div class="denylist-items" id="deniedIpList">
+                        Loading...
+                    </div>
+                </div>
+                <div class="denylist-card">
+                    <h3>🔒 Blocked Ports</h3>
+                    <div class="denylist-count" id="deniedPortCount">0</div>
+                    <div class="denylist-items" id="deniedPortList">
+                        Loading...
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="dashboard-footer">
+        <div class="footer-content">
+            <span>🔥 RL-Based Self-Learning Firewall</span>
+            <span class="separator">•</span>
+            <span>Powered by Deep Q-Network & MDP Enhancement</span>
+            <span class="separator">•</span>
+            <span id="packetRate">0 packets/sec</span>
+        </div>
+    </footer>
+
+    <!-- Include Socket.IO and custom JS -->
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
