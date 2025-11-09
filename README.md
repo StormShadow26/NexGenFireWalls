@@ -9,12 +9,12 @@ An intelligent firewall that uses Machine Learning (ML) to identify  threats in 
 ---
 
 ## 🎥 Demo Video  
-🔗 [Watch the Demo Video](PASTE_YOUR_DEMO_VIDEO_LINK_HERE)  
+🔗 [Watch the Demo Video](https://youtu.be/Sez6ZUQAxSg)  
 
 ---
 
 ## 🧾 Presentation  
-📑 [View the Presentation](https://drive.google.com/file/d/1Qh7V6eb-QWdwxsvueVOeXA0FsY-qoCIa/view?usp=sharing)  
+📑 [View the Presentation](https://drive.google.com/file/d/161kN7RBWN93KdTuz87oLv7RcEuMdfZfU/view?usp=sharing)  
 
 ---
 
