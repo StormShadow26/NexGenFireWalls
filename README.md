@@ -1,13 +1,10 @@
 
 <img width="1280" height="160" alt="BUILT AT Hack36 9 0 Secure" src="https://github.com/user-attachments/assets/e3846f22-352a-4c92-a70a-e052059da23a" />
 
-# 🚀 SKill_Issue — Built at Hack36 9.0  
+# 🚀 NexGen Firewall — By Skill_Issue
 
 ## 🧠 Introduction  
-(Write a short summary of your project here — 3 to 4 lines.)  
-Example:  
-Our project, **PROJECT_NAME**, is designed to solve **(problem statement)** by using **(technologies or methods)**.  
-It provides an intelligent and interactive solution to help users **(main purpose)** efficiently.  
+An intelligent firewall that uses Machine Learning (ML) to identify  threats in real-time.The Decision Tree uses packet features  to ask a series of high-speed "questions" to determine the threat.
 
 ---
 
@@ -64,13 +61,6 @@ Proudly built in just **36 hours** with teamwork, innovation, and caffeine ☕
 
 ---
 
-## 💬 How to Run  
-(Optional — Include only if your project has runnable code)
-
-1. Clone this repository  
-   ```bash
-   git clone https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPOSITORY_NAME.git
-   cd YOUR_REPOSITORY_NAME
 <img width="1280" height="160" alt="BUILT AT Hack36 9 0 Secure" src="https://github.com/user-attachments/assets/70127695-c239-4dc8-9d93-ce65b36ef1fa" />
 
 
