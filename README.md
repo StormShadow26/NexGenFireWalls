@@ -43,15 +43,11 @@ An intelligent firewall that uses Machine Learning (ML) to identify  threats in 
 ---
 
 ## 👩‍💻 Contributors  
-
-**Team Name:** *Level_Sabke_Niklenge*  
-
-| Name | Role | GitHub / LinkedIn |
-|------|------|-------------------|
-| Ashish Jha | Developer | [GitHub](ADD_LINK_HERE) / [LinkedIn](ADD_LINK_HERE) |
-| Tanishq Gupta | Developer | [GitHub](ADD_LINK_HERE) / [LinkedIn](ADD_LINK_HERE) |
-| Aryan Sharma | Developer | [GitHub](ADD_LINK_HERE) / [LinkedIn](ADD_LINK_HERE) |
-| Shoaib Samim | Developer | [GitHub](ADD_LINK_HERE) / [LinkedIn](ADD_LINK_HERE) |
+Team : Skill Issue
+[Ashish Jha](https://github.com/ashishjha20) 
+[Tanishq Gupta](https://github.com/StormShadow26)
+[Aryan Sharma](https://github.com/1aryansharma1) 
+[Shoaib Samim](https://github.com/samimshoaib01) 
 
 ---
 
